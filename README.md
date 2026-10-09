@@ -27,8 +27,8 @@ Ce projet est un devoir pratique de la Formation o'clock. Il sert à mettre en p
 ## Structure du projet
 ```
 le-petrin/  
-   ├── index.html        Page d'accueil
-   ├── commande.html     Page de réservation
+├── index.html        Page d'accueil
+├── commande.html     Page de réservation
 ├── README.md
 ├── css/
 │   └── style.css     Styles des deux pages
