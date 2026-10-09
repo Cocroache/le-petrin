@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Commander, Le Pétrin</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            Le Pétrin
+            <a href="index.html">Accueil</a>
+            <a href="#">Notre carte</a>
+            <a href="commande.html">Commander</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="#">
+            <fieldset>
+                <legend>Nom et prénom *</legend>
+                <input type="text" id="name" name="name" placeholder="Michel Lagrange" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>E-mail *</legend>
+                <input type="email" id="email" name="email" placeholder="michel@gmail.com" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Date de retrait</legend>
+                <input type="date" id="date" name="date">
+            </fieldset>
+
+            <fieldset>
+                <legend>Créneau de retrait</legend>
+                <select name="retrait" id="creneau-de-retrait">
+                    <option value="matin">7h-9h</option>
+                    <option value="midi">9h-12h</option>
+                    <option value="soir">16h-19h</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre commande est</legend>
+                <div>
+                    <input type="radio" id="sur-place" name="choix" value="sur-place">
+                    <label for="sur-place">sur place</label>
+                </div>
+                <div>
+                    <input type="radio" id="a-emporter" name="choix" value="a-emporter">
+                    <label for="a-emporter">à emporter</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>J'ai la carte de fidélité</legend>
+                <div>
+                    <input type="radio" id="fidelite-oui" name="fidelite" value="oui">
+                    <label for="fidelite-oui">Oui</label>
+                </div>
+                <div>
+                    <input type="radio" id="fidelite-non" name="fidelite" value="non">
+                    <label for="fidelite-non">Non</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Instruction particulière</legend>
+                <label for="message">Votre message</label>
+                <textarea name="message" id="message" rows="5"
+                    placeholder="Une précision sur votre commande ? Par exemple : pain bien cuit, tarte coupée en 6…"></textarea>
+            </fieldset>
+
+            <button type="submit">Commander</button>
+            <p>Les champs marqués d'une * sont obligatoires.</p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Le Pétrin, boulangerie artisanale</p>
+        <address>
+            8 rue du Fournil, 18000 Bourges (adresse fictive)<br>
+            Téléphone : <a href="tel:0200000000">02 00 00 00 00</a> (numéro fictif)
+        </address>
+        <p><a href="commande.html">Réserver une commande</a></p>
+        <p>© 2026 Le Pétrin. Projet réalisé dans le cadre de la Formation O'clock</p>
+    </footer>
+
+    <script src="js/scripte.js"></script>
+</body>
+
+</html>
