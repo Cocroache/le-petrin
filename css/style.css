@@ -1,0 +1,161 @@
+:root {
+
+    --body-color: #F8E2E2;
+    --header-color: #3E2A3D;
+    --card-color: #D6BCFA;
+    ---color: #9F7AEA;
+    ---color: #5A8F6D;
+
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/*             =====Header======                     */
+
+body {
+    margin: 0;
+    background-color: var(--body-color);
+
+}
+
+header {
+    display: flex;
+    background-color: var(--header-color);
+    padding: 2rem;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    align-items: center;
+
+}
+
+.span-header {
+    font-family: "Black Ops One", system-ui;
+    font-size: 2rem;
+}
+
+.nav {
+    display: flex;
+    gap: 0.8rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*                     ========Main==========              */
+
+
+main {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    
+}
+
+article{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+}
+
+.carte {
+    display: grid;
+    background-color: var(--card-color);
+    place-items: center;
+     font-family: "Roboto", sans-serif;
+    margin: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+    border: solid 0.5rem var(--header-color);
+    
+    
+   
+
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+table{
+    text-align: center;
+    display: grid;
+    place-items: center;
+    
+    
+}
+.horaires{
+
+    
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    
+}
+
+
+/*                  =====footer=====                                */
+
+
+footer {
+    background-color: var(--header-color);
+    margin: 0;
+}
+
+
+
+/*               ========Media query=======                 */
+
+@media (min-width:600px) {
+
+    .media {
+    
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    
+}
+
+
+}
+
+
+@media (min-width:900px) {
+
+    .media {
+    
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    
+}
+
+
+}
