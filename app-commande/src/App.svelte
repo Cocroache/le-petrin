@@ -1,4 +1,7 @@
 <script>
+  import CarteProduit from "./lib/CarteProduit.svelte";
+
+
 const produits = [
   { id: 1, nom: "Baguette tradition", prix: 1.30, categorie: "pain", nouveau: false },
   { id: 2, nom: "Pain de campagne", prix: 3.80, categorie: "pain", nouveau: false },
@@ -7,12 +10,16 @@ const produits = [
   { id: 5, nom: "Éclair au café", prix: 2.90, categorie: "patisserie", nouveau: true },
   { id: 6, nom: "Tarte aux pommes", prix: 3.50, categorie: "patisserie", nouveau: true }
 ];
+
+
 </script>
+<header>
+    <h1 class="title-page">Commander au Pétrin</h1>
+</header>
 <div class="container">
-    <header>
-        <h1 class="title-page">Commander au Pétrin</h1>
-    </header>
-    
+    {#each produits as produit (produit.id) }
+<CarteProduit nom={produit.nom} prix={produit.prix} nouveau={produit.nouveau}/>
+{/each}
     
     
 </div>
@@ -21,6 +28,11 @@ const produits = [
 
 
 <style>
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
 
 </style>
