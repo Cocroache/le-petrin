@@ -20,16 +20,15 @@ let{nom,prix,nouveau=false} = $props()
     .carte{
   border: solid black 1px;
   border-radius: 5px;
-}
-article{
   position: relative;
 }
+
 .badge{
   position: absolute;
   top: -10px;
   right: -15px;
   border: solid black 1px;
-  background-color: #3E2A3D;
+  background-color: #D6BCFA;
   color: #9F7AEA;
 }
 .carte{
