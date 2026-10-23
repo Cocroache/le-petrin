@@ -1,5 +1,5 @@
 <script>
-let{nom,prix,nouveau=false} = $props()
+let{nom,prix,nouveau=false,onAjout} = $props()
 </script>
 
 
@@ -8,9 +8,10 @@ let{nom,prix,nouveau=false} = $props()
 <article class="carte">
     <h2>{nom}</h2>
     <p>{prix.toFixed(2)} €</p>
+    <button onclick={onAjout}>Ajouter</button>
     {#if nouveau === true }
     
-    <p><span class="badge">Nouveau</span></p>
+    <span class="badge">Nouveau</span>
     
     
     {/if}
@@ -21,6 +22,8 @@ let{nom,prix,nouveau=false} = $props()
   border: solid black 1px;
   border-radius: 5px;
   position: relative;
+  background-color: #F8E2E2;
+
 }
 
 .badge{
@@ -29,9 +32,7 @@ let{nom,prix,nouveau=false} = $props()
   right: -15px;
   border: solid black 1px;
   background-color: #D6BCFA;
-  color: #9F7AEA;
+  color: white;
 }
-.carte{
-    background-color: #F8E2E2;
-}
+
 </style>
