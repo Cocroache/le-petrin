@@ -11,6 +11,7 @@
   ];
 
   let categorie = $state("tout");
+  
 
   let produitsAffiches = $derived.by(() => {
     if (categorie === "tout") {
@@ -34,6 +35,30 @@
   function retirer(index) {
     panier.splice(index, 1);
   }
+
+let totalPanier = $derived.by(() => {
+let somme = 0
+for(let produit of panier){
+somme = somme + produit.prix
+}
+return somme
+})
+let mode = $state("sur place")
+
+let fidele = $state(false)
+
+let prixFinal = $derived.by(() => {
+  let final = totalPanier
+  
+   if (mode === "emporter"){
+      final = totalPanier * 0.95
+   }
+   if(fidele === true && totalPanier > 10 ){
+      final = final - 1
+   }
+   final = Math.round(final*100)/100
+   return final
+  })
 </script>
 
 <header>
@@ -42,6 +67,8 @@
 
 <main>
   <section class="selection">
+  <p>Total : {totalPanier.toFixed(2)} €</p>
+  {prixFinal.toFixed(2)} €
     <button onclick={() => categorie = "tout"} class:actif={categorie === "tout"}>Tout</button>
     <button onclick={() => categorie = "pain"} class:actif={categorie === "pain"}>Pains</button>
     <button onclick={() => categorie = "viennoiserie"} class:actif={categorie === "viennoiserie"}>Viennoiseries</button>
@@ -66,7 +93,15 @@
     {:else}
       <p>Votre panier est vide</p>
     {/each}
+    <select bind:value={mode}>
+  <option value="sur place">Sur place</option>
+  <option value="emporter">À emporter</option>
+</select>
   </section>
+  <label>
+  <input type="checkbox" bind:checked={fidele}>
+  J'ai la carte de fidélité
+</label>
 </main>
 
 <style>
@@ -78,6 +113,7 @@
   }
   .actif {
     background-color: #D6BCFA;
+    color: black;
   }
   .container {
     display: grid;
