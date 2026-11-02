@@ -23,16 +23,19 @@ let{nom,prix,nouveau=false,onAjout} = $props()
   border-radius: 5px;
   position: relative;
   background-color: #F8E2E2;
+  color: black;
 
 }
-
+h2{
+  color: black;
+}
 .badge{
   position: absolute;
   top: -10px;
   right: -15px;
   border: solid black 1px;
   background-color: #D6BCFA;
-  color: white;
+  
 }
 
 </style>
