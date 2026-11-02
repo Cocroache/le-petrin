@@ -76,7 +76,7 @@ puis ouvrir l'adresse affichée dans le terminal (en général http://localhost:
 
 ## Voir le site en ligne
 
-Lien GitHub Pages : à ajouter une fois le site publié
+Lien GitHub Pages : (https://cocroache.github.io/le-petrin/)
 
 ## Auteur
 
