@@ -50,7 +50,7 @@
     chargement = true;
     erreur = null;
     try {
-      const reponse = await fetch("/produits.json");
+      const reponse = await fetch("produits.json");
       if (!reponse.ok) throw new Error("Erreur " + reponse.status);
       produits = await reponse.json();
     } catch (e) {
