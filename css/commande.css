@@ -1,0 +1,109 @@
+:root {
+    --body-color: #F8E2E2;
+    --header-color: #3E2A3D;
+    --card-color: #D6BCFA;
+    --accent-color: #9F7AEA;
+    --green-color: #5A8F6D;
+    --btn-color: #3e2a3d2c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--body-color);
+    font-family: "Roboto", sans-serif;
+}
+
+/*             ===== Header =====             */
+header {
+    display: flex;
+    background-color: var(--header-color);
+    padding: 2rem;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    align-items: center;
+}
+
+.span-header {
+    font-family: "Black Ops One", system-ui;
+    font-size: 2rem;
+}
+
+.nav {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+/*             ===== Main =====               */
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 100px;
+    padding: 20px;
+}
+
+.media {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+.container-btn{
+    display: flex;
+    justify-content: center;
+}
+
+/*             ===== Footer =====             */
+
+footer {
+    background-color: var(--header-color);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+footer address {
+    font-style: normal;
+}
+
+footer a {
+    color: white;
+}
+
+
+/*             ===== Media queries =====             */
+
+@media (min-width: 600px) {
+    .media {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .media {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
